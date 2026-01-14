@@ -18,4 +18,5 @@ src/utils/__init__.py
 src/utils/config.py
 src/utils/logging.py
 src/utils/reproducibility.py
+tests/test_e2e_tabular.py
 tests/test_smoke.py
