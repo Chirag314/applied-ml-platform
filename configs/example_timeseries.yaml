@@ -1,0 +1,6 @@
+project: applied-ml-platform
+run_name: timeseries_baseline_v1
+seed: 42
+task:
+  modality: timeseries
+  problem_type: regression

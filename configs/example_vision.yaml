@@ -1,0 +1,6 @@
+project: applied-ml-platform
+run_name: vision_baseline_v1
+seed: 42
+task:
+  modality: vision
+  problem_type: classification

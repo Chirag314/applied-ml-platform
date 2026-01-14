@@ -1,0 +1,6 @@
+project: applied-ml-platform
+run_name: tabular_baseline_v1
+seed: 42
+task:
+  modality: tabular
+  problem_type: classification
