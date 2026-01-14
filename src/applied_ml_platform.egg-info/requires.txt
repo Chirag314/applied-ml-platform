@@ -1,0 +1,12 @@
+numpy
+pandas
+scikit-learn
+pyyaml
+joblib
+fastapi
+uvicorn
+pydantic>=2
+
+[dev]
+pytest
+ruff

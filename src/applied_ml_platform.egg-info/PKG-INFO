@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: applied-ml-platform
+Version: 0.1.0
+Summary: Production-style ML system repo supporting mixed modalities (tabular, time-series, vision).
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: pyyaml
+Requires-Dist: joblib
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic>=2
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
