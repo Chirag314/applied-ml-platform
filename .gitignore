@@ -4,8 +4,13 @@ venv/
 data/
 results/
 # Ignore all artifacts by default
-artifacts/*
+# Ignore all artifacts by default
+artifacts/**
 
-# But allow time-series backtest plots to be committed
+# Allow lightweight doc visuals
 !artifacts/**/backtest.png
+
+# Also allow parent dirs so Git can "see" the file
+!artifacts/
+!artifacts/**/
 
