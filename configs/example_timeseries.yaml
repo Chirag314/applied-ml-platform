@@ -1,6 +1,31 @@
 project: applied-ml-platform
-run_name: timeseries_baseline_v1
+run_name: ts_baseline_v1
 seed: 42
+
 task:
   modality: timeseries
-  problem_type: regression
+  problem_type: forecasting
+
+data:
+  source: synthetic_sine  # v1: synthetic, then we add CSV support
+  n_points: 3000
+  freq: "h"
+  noise_std: 0.3
+
+features:
+  lags: [1, 2, 3, 6, 12, 24]
+  rolling_windows: [6, 12, 24]
+  add_time_features: true   # hour-of-day, day-of-week
+
+validation:
+  horizon: 24               # forecast next 24 steps
+  n_folds: 5
+  min_train_size: 1000
+  step_size: 200            # advance window per fold
+
+model:
+  name: ridge
+  alpha: 1.0
+
+training:
+  save_dir: artifacts
