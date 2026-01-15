@@ -144,13 +144,16 @@ artifacts/latest.txt
 
 uvicorn service.app:app --reload --port 8000
 
-Endpoint	        Method	Description
+### Available Endpoints
 
-/health	            GET	    Service & model health
-/model-info	        GET   	Active model metadata
-/predict	        POST	Tabular inference
-/predict-timeseries	POST	Multi-step time-series forecast
-/admin/reload-model	POST	Reload active model
+| Endpoint | Method | Description |
+|:--|:--:|:--|
+| `/health` | GET | Service & model health |
+| `/model-info` | GET | Active model metadata |
+| `/predict` | POST | Tabular inference |
+| `/predict-timeseries` | POST | Multi-step time-series forecast |
+| `/admin/reload-model` | POST | Reload active model |
+
 
 ### Swagger UI:
 http://localhost:8000/docs
