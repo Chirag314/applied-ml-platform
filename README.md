@@ -24,13 +24,13 @@ This project focuses on **ML system ownership**:
 
 ## 🌟 Features
 
-- ✔ Config-driven, reproducible ML training  
-- ✔ Tabular ML (classification / regression)  
-- ✔ Time-series forecasting with walk-forward validation  
-- ✔ Versioned model artifacts per run  
-- ✔ FastAPI inference service  
-- ✔ Runtime model reload without redeploy  
-- ✔ Backtest plots & metrics saved automatically  
+  ✔ Config-driven, reproducible ML training  
+  ✔ Tabular ML (classification / regression)  
+  ✔ Time-series forecasting with walk-forward validation  
+  ✔ Versioned model artifacts per run  
+  ✔ FastAPI inference service  
+  ✔ Runtime model reload without redeploy  
+  ✔ Backtest plots & metrics saved automatically  
 
 ---
 
@@ -54,6 +54,7 @@ Inference API (FastAPI)
  /predict-timeseries
  /reload-model
 
+---
 
 ## 📦 Project Structure
 
@@ -73,6 +74,7 @@ applied-ml-platform/
 ├── tests/               # Smoke & integration tests
 └── README.md
 
+---
 ## 🧠 Supported ML Modalities
 ### 1️⃣ Tabular Machine Learning
 
@@ -84,6 +86,8 @@ applied-ml-platform/
 
     * REST-based inference
 
+---
+
 ## 2️⃣ Time-Series Forecasting
 
     * Walk-forward (leakage-safe) cross-validation
@@ -93,6 +97,8 @@ applied-ml-platform/
     * Recursive multi-step forecasting
 
     * Offline backtests saved per run
+
+---
 
 ## 📊 Time-Series Backtest (Example)
 
@@ -106,6 +112,8 @@ Each run produces:
 - `metadata.json`
 - `backtest.csv`
 - `backtest.png`
+
+---
 
 ## 🚀 Training
 
@@ -125,6 +133,8 @@ artifacts/<run_name>/
 
 artifacts/latest.txt
 
+---
+
 ## 🌐 Inference Service
 ### Start the API
 
@@ -140,6 +150,8 @@ Endpoint	        Method	Description
 
 ### Swagger UI:
 http://localhost:8000/docs
+
+---
 
 ## 🔄 Model Lifecycle
 
@@ -157,7 +169,7 @@ http://localhost:8000/docs
 
 7. This mirrors real production ML workflows.
 
-
+---
 ## 🛣 Roadmap
 
 Multimodal ensembles (tabular + time-series)
@@ -171,6 +183,8 @@ Batch inference pipelines
 Model cards per run
 
 CI validation of training configs
+
+---
 
 ### ⭐ If you find this project useful, consider starring the repository.
 
