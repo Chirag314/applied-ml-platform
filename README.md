@@ -54,7 +54,7 @@ Inference API (FastAPI)
  /predict-timeseries
  /reload-model
 
-'''
+```
 ---
 
 ## 📦 Project Structure
