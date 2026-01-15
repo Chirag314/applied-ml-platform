@@ -144,6 +144,12 @@ artifacts/latest.txt
 
 uvicorn service.app:app --reload --port 8000
 
+### Model Registry
+
+- List all available runs: `GET /runs`
+- Promote a run to production: `POST /admin/promote`
+
+
 ### Available Endpoints
 
 | Endpoint | Method | Description |

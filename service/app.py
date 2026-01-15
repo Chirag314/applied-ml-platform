@@ -445,3 +445,35 @@ def predict_timeseries(req: TSPredictRequest):
         s.loc[len(s)] = yhat
 
     return {"active_run": ACTIVE_RUN, "horizon": horizon, "yhat": preds}
+
+
+from src.models.registry import list_runs, promote_run
+
+
+@app.get("/runs")
+def runs():
+    out = []
+    for r in list_runs():
+        out.append(
+            {
+                "run_name": r.run_name,
+                "task": r.task,
+                "metrics": r.metrics,
+                "artifact_dir": r.artifact_dir,
+                "is_active": r.is_active,
+            }
+        )
+    return {"runs": out}
+
+
+class PromoteRequest(BaseModel):
+    run_name: str
+
+
+@app.post("/admin/promote")
+def admin_promote(req: PromoteRequest, token: Optional[str] = None):
+    require_admin(token)
+    promote_run(req.run_name)
+    # optional: reload immediately
+    load_active_model("latest" if MODEL_RUN_NAME == "latest" else MODEL_RUN_NAME)
+    return {"status": "ok", "latest": req.run_name, "active_run": ACTIVE_RUN}
