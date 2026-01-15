@@ -3,4 +3,9 @@ __pycache__/
 venv/
 data/
 results/
-artifacts/
+# Ignore all artifacts by default
+artifacts/*
+
+# But allow time-series backtest plots to be committed
+!artifacts/**/backtest.png
+
