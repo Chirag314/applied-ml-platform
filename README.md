@@ -54,6 +54,7 @@ Inference API (FastAPI)
  /predict-timeseries
  /reload-model
 
+'''
 ---
 
 ## 📦 Project Structure
@@ -78,25 +79,25 @@ applied-ml-platform/
 ## 🧠 Supported ML Modalities
 ### 1️⃣ Tabular Machine Learning
 
-    * Classification / regression
+    - Classification / regression
 
-    * Feature shape validation
+    - Feature shape validation
 
-    * Probability outputs
+    - Probability outputs
 
-    * REST-based inference
+    - REST-based inference
 
 ---
 
 ## 2️⃣ Time-Series Forecasting
 
-    * Walk-forward (leakage-safe) cross-validation
+    - Walk-forward (leakage-safe) cross-validation
 
-    * Lag & rolling-window features
+    - Lag & rolling-window features
 
-    * Recursive multi-step forecasting
+    - Recursive multi-step forecasting
 
-    * Offline backtests saved per run
+    - Offline backtests saved per run
 
 ---
 
@@ -188,4 +189,4 @@ CI validation of training configs
 
 ### ⭐ If you find this project useful, consider starring the repository.
 
-::contentReference[oaicite:0]{index=0}
+
