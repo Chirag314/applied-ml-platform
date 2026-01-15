@@ -59,6 +59,8 @@ Inference API (FastAPI)
 
 ## 📦 Project Structure
 
+```text
+
 applied-ml-platform/
 │
 ├── src/
@@ -75,6 +77,7 @@ applied-ml-platform/
 ├── tests/               # Smoke & integration tests
 └── README.md
 
+```
 ---
 ## 🧠 Supported ML Modalities
 ### 1️⃣ Tabular Machine Learning
